@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiante</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="form-container">
+        <img src="uleam.png" alt="ULEAM" class="logo">
+        <header>
+            <h1 ALIGN=CENTER>Registro de personas con capacidades especiales</h1>
+        </header> 
+        <h2>Ingrese los datos del estudiante:</h2>
+        <form id="studentForm">
+            <!-- Sección de formulario para ingresar los datos del estudiante -->
+            <div class="form-group">
+                <label for="name">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="nacimiento" name="nacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="cedula">Número de cédula:</label>
+                <input type="number" id="cedula" name="cedula" min="1000000000" max="9999999999" pattern="\d{1,10}" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" min="0" max="9999999999" pattern="\d{1,10}" required>
+            </div>
+            <div class="form-group">
+                <label for="genero">Género:</label>
+                <select name="genero" id="genero" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                  </select>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección Postal:</label>
+                <textarea id="direccion" name="direccion" required></textarea>
+            </div>
+            <h2>Ingrese los datos académicos del estudiante:</h2>
+            <div class="form-group">
+                <label for="programa">Programa de Estudio:</label>
+                <input type="text" id="programa" name="programa" required>
+            </div>
+            <div class="form-group">
+                <label for="matricula">Número de Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </div>
+            <h2>Información sobre la Discapacidad:</h2>
+            <div class="form-group">
+                <label for="tipo_discapacidad">Tipo de Discapacidad:</label><br>
+                <input type="checkbox" id="visual" name="tipo_discapacidad" value="visual">
+                <label for="visual">Visual</label><br>
+                <input type="checkbox" id="auditiva" name="tipo_discapacidad" value="auditiva">
+                <label for="auditiva">Auditiva</label><br>
+                <input type="checkbox" id="motriz" name="tipo_discapacidad" value="motriz">
+                <label for="motriz">Motriz</label><br>
+                <input type="checkbox" id="intelectual" name="tipo_discapacidad" value="intelectual">
+                <label for="intelectual">Intelectual</label><br>
+            </div>
+            <div class="form-group">
+                <label for="ajustes">¿Requiere Ajustes Especiales?</label>
+                <textarea id="ajustes" name="ajustes" aria-label="Descripción de ajustes especiales"></textarea>
+            </div>
+            <h2>Información de Emergencia:</h2>
+            <div class="form-group">
+                <label for="contacto_emergencia">Contacto de Emergencia:</label>
+                <input type="text" id="contacto_emergencia" name="contacto_emergencia" required aria-label="Contacto de emergencia">
+            </div>
+            <div class="form-group">
+                <label for="relacion_contacto">Relación con el Contacto de Emergencia:</label>
+                <input type="text" id="relacion_contacto" name="relacion_contacto" required aria-label="Relación con el contacto de emergencia">
+            </div>
+            <p></p>
+            <button type="reset">Limpiar</button>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
